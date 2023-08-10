@@ -118,12 +118,12 @@ void solve(){
         if(a==2){
             if(b==4%p) puts("2");
             else if(b==65536%p) puts("3");
-            else if(b==calc(a,60,1).x%p) puts("4");
+            else if(b==calc(a,100,1).x%p) puts("4");
             else puts("-1");
             return;
         }
         if(b==calc(a,a,1).x)puts("2");
-        else if(b==calc(a,60,1).x)puts("3");
+        else if(b==calc(a,100,1).x)puts("3");
         else puts("-1");
     }
 }

@@ -33,7 +33,6 @@ void get_sa(){
         if(num==n) break;
         m=num;
     }
-    for(int i=1;i<=n;i++) cout<<sa[i]<<" ";
 }
 int rk[N];
 int height[N];
@@ -50,8 +49,10 @@ void get_height(){
     }
 }
 signed main() {
-    cin>>(s+1);
-    n= strlen(s+1);
+    cin>>n>>(s+1);
     get_sa();
     get_height();
+    int ans=n*(n+1)/2;
+    for(int i=2;i<=n;i++) ans-=height[i];
+    cout<<ans;
 }

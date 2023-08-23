@@ -58,7 +58,7 @@ signed main(){
         qq[l]=0;
         for(int i=1;i<=n;i++) dp[i]=dis[i];
         for(int i=1;i<=n;i++){
-            while(l<r&&slope(qq[r-1],qq[r])>slope(qq[r-1],i)) --r;
+            while(l<r&&slope(qq[r-1],qq[r])>slope(qq[r],i)) --r;
             qq[++r]=i;
         }
         for(int i=1;i<=n;i++) {

@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "*.tcc": "cpp",
+        "cstdio": "cpp",
+        "iostream": "cpp",
+        "random": "cpp"
+    },
+    "code-runner.runInTerminal": true,
+    "code-runner.saveFileBeforeRun": true,
+    "code-runner.temporaryFileName": "模板",
+    "luogu.defaultLanguage": "C++14 (GCC 9)",
+    "luogu.defaultWaitingTime": 1000
+}

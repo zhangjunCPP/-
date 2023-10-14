@@ -3,7 +3,8 @@
         "*.tcc": "cpp",
         "cstdio": "cpp",
         "iostream": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "queue": "cpp"
     },
     "code-runner.runInTerminal": true,
     "code-runner.saveFileBeforeRun": true,

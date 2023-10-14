@@ -10,5 +10,7 @@
     "code-runner.saveFileBeforeRun": true,
     "code-runner.temporaryFileName": "模板",
     "luogu.defaultLanguage": "C++14 (GCC 9)",
-    "luogu.defaultWaitingTime": 1000
+    "luogu.defaultWaitingTime": 1000,
+    "cph.general.timeOut": 100000,
+    "cph.general.useShortCodeForcesName": true
 }

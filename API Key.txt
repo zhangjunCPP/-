@@ -1,1 +1,2 @@
 sk-ce4lffDfpu5lnMdO3LsiJL9gaEVw1whaadeet5mKd8iXUL3I
+https://api.chatanywhere.com.cn/v1/chat/completions

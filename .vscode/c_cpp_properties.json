@@ -1,7 +1,7 @@
 {
     "configurations": [
         {
-            "name": "TDM-GCC-64-10.3.0-2",
+            "name": "MinGw64 13.2.0",
             "includePath": [
                 "${workspaceFolder}/**"
             ],
@@ -10,7 +10,7 @@
                 "UNICODE",
                 "_UNICODE"
             ],
-            "compilerPath": "C:/TDM-GCC-64/bin/g++.exe",
+            "compilerPath": "C:/mingw64/bin/g++.exe",
             "cStandard": "c23",
             "cppStandard": "c++23",
             "intelliSenseMode": "${default}",

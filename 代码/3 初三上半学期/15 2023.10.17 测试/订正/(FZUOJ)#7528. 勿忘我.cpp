@@ -6,11 +6,17 @@ const int N=3e5+5;
 int n,m;
 map<PII,bool> mp;
 int pre[N],nex[N];
+int read(){
+    int x=0,f=1; char ch=getchar();
+    while(!isdigit(ch)) {if(ch=='-') f=-1; ch=getchar();}
+    while(isdigit(ch)) {x=x*10+(ch-'0'); ch=getchar();}
+    return x*f;
+}
 signed main(){
-    cin>>n>>m;
+    n=read(),m=read();
     for(int i=1;i<=m;i++) {
         int u,v;
-        cin>>u>>v;
+        u=read(),v=read();
         if(u>v) swap(u,v);
         mp[{u,v}]=1;
     }
@@ -19,12 +25,14 @@ signed main(){
     int x=2;//分割点
     nex[1]=2;
     pre[2]=1;
+    int End=2;
     for(int i=3;i<=n;i++){
         if(same){
             nex[x]=i;
             pre[i]=x;
             if((mp.find({x,i})!=mp.end())!=flag)same=false;
             else x=i;
+            End=i;
             continue;
         }
         else {
@@ -53,7 +61,7 @@ signed main(){
                 if(pre[x]==0){
                     same=true;
                     flag=(mp.find({a,i})!=mp.end());
-                    for(int j=nex[1];j;j=nex[j]) x=j;
+                    x=End;
                 }
             }
         }

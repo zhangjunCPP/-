@@ -78,9 +78,6 @@ int main(){
 	cin.tie(0),cout.tie(0);
 	int T;
 	cin>>T;
-	while(T--) solve(); 
-
-
+	while(T--) solve();
 	return 0;
 }
-

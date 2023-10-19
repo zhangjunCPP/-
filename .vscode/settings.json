@@ -4,7 +4,9 @@
         "cstdio": "cpp",
         "iostream": "cpp",
         "random": "cpp",
-        "queue": "cpp"
+        "queue": "cpp",
+        "string": "cpp",
+        "format": "cpp"
     },
     "code-runner.runInTerminal": true,
     "code-runner.saveFileBeforeRun": true,

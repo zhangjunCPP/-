@@ -25,5 +25,24 @@
     "editor.fontLigatures": true, // 是否启用字体连字
     "editor.fontSize": 14, //设置字体大小
     "editor.fontWeight": "normal", //设置字体粗细
-    "editor.fontFamily": "'JetBrains Mono'"
+    "editor.fontFamily": "'JetBrains Mono'",
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "name": "Comment",
+                "scope": [
+                    "comment",
+                    "comment.block",
+                    "comment.block.documentation",
+                    "comment.line",
+                    "comment.line.double-slash",
+                    "punctuation.definition.comment",
+                ],
+                "settings": {
+                    "foreground": "#1b66b1", //设置颜色
+                    "fontStyle": "italic", //斜体 
+                }
+            },
+        ]
+    }
 }

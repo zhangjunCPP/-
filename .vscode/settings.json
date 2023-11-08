@@ -16,7 +16,7 @@
     "cph.general.timeOut": 100000,
     "cph.general.useShortCodeForcesName": true,
     "cph.language.cpp.SubmissionCompiler": "GNU G++14 6.4.0",
-    "cph.language.cpp.Args": "-std=c++23 -O2 -Wall -Wextra",
+    "cph.language.cpp.Args": "-std=c++14 -O2 -Wall -Wextra",
     "cph.general.menuChoices": "cpp",
     "dateTime.customFormat": "YYYY-MM-DD dddd A HH:mm:ss",
     "dateTime.statusBarPriority": 1000,
@@ -44,5 +44,6 @@
                 }
             },
         ]
-    }
+    },
+    "cph.general.defaultLanguage": "cpp"
 }

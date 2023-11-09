@@ -6,7 +6,8 @@
         "random": "cpp",
         "queue": "cpp",
         "string": "cpp",
-        "format": "cpp"
+        "format": "cpp",
+        "ostream": "cpp"
     },
     "code-runner.runInTerminal": true,
     "code-runner.saveFileBeforeRun": true,

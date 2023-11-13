@@ -16,6 +16,7 @@ int calc(int x,int y){
     return sum;
 }
 void solve(int now,int l,int r,int x,int y){
+    if(l>r) return;
     int mid=(l+r)>>1;
     int Min=INF,id;
     for(int i=max(1ll,x);i<=min(mid,y);i++) {
@@ -23,8 +24,7 @@ void solve(int now,int l,int r,int x,int y){
         if(tmp<Min) Min=tmp,id=i;
     }
     dp[mid][now]=Min;
-    if(l==r) return;
-    solve(now,l,mid,x,id);
+    solve(now,l,mid-1,x,id);
     solve(now,mid+1,r,id,y);
 }
 signed main(){

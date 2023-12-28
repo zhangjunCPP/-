@@ -24,7 +24,7 @@
     "luogu.effectiveDuration": -1,
     "vscode-office.editorLanguage": "zh_CN",
     "editor.fontLigatures": true, // 是否启用字体连字
-    "editor.fontSize": 14, //设置字体大小
+    "editor.fontSize": 15, //设置字体大小
     "editor.fontWeight": "normal", //设置字体粗细
     "editor.fontFamily": "'JetBrains Mono'",
     "editor.tokenColorCustomizations": {

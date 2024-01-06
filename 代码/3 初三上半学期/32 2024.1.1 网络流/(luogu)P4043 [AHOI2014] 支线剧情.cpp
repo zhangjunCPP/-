@@ -57,7 +57,7 @@ int dinic(int x,int val){
     vis[x]=false;
     return val-have;
 }
-main(){
+signed main(){
     int ans=0;
     int n;
     cin>>n;

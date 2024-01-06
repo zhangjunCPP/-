@@ -58,7 +58,7 @@ int f_art(int i,int j){return n*m+f(i,j);}
 int f_sci(int i,int j){return n*m*2+f(i,j);}
 int art[105][105],sci[105][105];
 int exart[105][105],exsci[105][105];
-main(){
+signed main(){
     cin>>n>>m;
     int sum=0;
     s=n*m*3+1,t=n*m*3+2;

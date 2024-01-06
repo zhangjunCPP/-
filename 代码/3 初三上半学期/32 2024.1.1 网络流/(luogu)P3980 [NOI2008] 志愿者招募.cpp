@@ -60,8 +60,7 @@ int dinic(int x,int val){
 
 int ans;
 int need[1000000];
-//1~n:上午,n+1~2n:下午
-main(){
+signed main(){
     int n,m;
     cin>>n>>m;
     s=0,t=n+2;

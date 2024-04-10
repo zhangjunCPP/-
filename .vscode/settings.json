@@ -46,5 +46,7 @@
             },
         ]
     },
-    "cph.general.defaultLanguage": "cpp"
+    "cph.general.defaultLanguage": "cpp",
+    "editor.mouseWheelZoom": true,
+    "files.autoSave": "onFocusChange"
 }

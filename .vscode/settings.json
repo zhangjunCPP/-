@@ -132,5 +132,7 @@
     },
     "cph.general.defaultLanguage": "cpp",
     "editor.mouseWheelZoom": true,
-    "files.autoSave": "onFocusChange"
+    "files.autoSave": "onFocusChange",
+    "editor.detectIndentation": true,
+    "editor.insertSpaces": false
 }

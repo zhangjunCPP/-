@@ -5,13 +5,13 @@
             "name": "gdb",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}/a.exe",
+            "program": "${fileDirname}/a",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "environment": [],
             "MIMode": "gdb",
-            "miDebuggerPath": "/usr/bin/gcc",
+            "miDebuggerPath": "/usr/bin/gdb",
             "preLaunchTask": "C/C++: g++.exe 生成活动文件",
             "setupCommands": [
                 {

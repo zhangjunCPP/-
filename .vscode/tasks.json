@@ -3,19 +3,17 @@
         {
             "type": "cppbuild",
             "label": "C/C++: g++.exe 生成活动文件",
-            "command": "/usr/bin/gcc",
+            "command": "/usr/bin/g++",
             "args": [
-                "-fdiagnostics-color=always",
-                "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}/a.exe",
+                "${fileDirname}/a",
                 "-std=c++14",
                 "-O2",
                 "-Wall",
             ],
             "options": {
-                "cwd": "/usr/bin/gcc"
+                "cwd": "/usr/bin/g++"
             },
             "problemMatcher": [
                 "$gcc"

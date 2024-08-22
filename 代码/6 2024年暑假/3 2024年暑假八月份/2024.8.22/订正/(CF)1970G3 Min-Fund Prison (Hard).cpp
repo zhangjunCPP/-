@@ -55,14 +55,19 @@ int dfs2(int u,int sum) {
 	for(int v:G[u])if(!vis2[v])siz+=dfs2(v,sum);
 	f|=g>>siz;
 	f|=g>>(sum-siz);
-	// cout<<"u="<<u<<" siz="<<siz<<"\n";
 	return siz;
 }
 int sum[N];
-signed main(){
-	ios::sync_with_stdio(false);cin.tie(nullptr),cout.tie(nullptr);
-	freopen("b.in","r",stdin);
-	freopen("b.out","w",stdout);
+void clear() {
+	memset(first,0,sizeof first);
+	cnt=0;
+	memset(sum_v,0,sizeof sum_v);
+	scc=tot=0;
+	memset(dfn,0,sizeof dfn);
+	memset(vis2,0,sizeof vis2);
+}
+void solve() {
+	clear();
 	int n,m,c;
 	cin>>n>>m>>c;
 	for(int i=1;i<=m;i++) {
@@ -71,16 +76,15 @@ signed main(){
 		add(u,v),add(v,u);
 	}
 	for(int i=1;i<=n;i++)if(!dfn[i])Tarjan(i,0);
-	if(scc==1){puts("-1");return 0;}
+	if(scc==1){cout<<"-1\n";return;}
+	for(int i=1;i<=n;i++)G[i].clear();
 	for(int i=1;i<=n;i++) {
 		for(int j=first[i];j;j=a[j].nex) {
 			int v=a[j].v;
 			if(belong[i]!=belong[v])G[belong[i]].push_back(belong[v]);
 		}
 	}
-	// cout<<scc<<"\n";
-	// for(int i=1;i<=n;i++)cout<<G[i].size()<<" ";
-	// cout<<"\n";
+	f.reset();
 	f[0]=1;
 	int ans=0;
 	for(int i=1;i<=scc;i++) {
@@ -94,18 +98,13 @@ signed main(){
 	memset(vis2,false,sizeof vis2);
 	g=f;
 	for(int i=1;i<=scc;i++)if(!vis2[i])dfs2(i,sum[i]);
-
 	int x=n/2;
 	while(!f[x])x--;
-	cout<<ans+x*x+(n-x)*(n-x);
-	return 0;
+	cout<<ans+x*x+(n-x)*(n-x)<<"\n";
 }
-/*
-6 6 2
-1 4
-2 5
-3 6
-1 5
-3 5
-6 5
-*/
+signed main(){
+	ios::sync_with_stdio(false);cin.tie(nullptr),cout.tie(nullptr);
+	int T;
+	cin>>T;
+	while(T--)solve();
+}

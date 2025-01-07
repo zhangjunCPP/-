@@ -5,7 +5,7 @@ using namespace std;
 signed main(){
 	freopen("array.in","r",stdin);
 	freopen("array.out","w",stdout);
-    int n;
+	int n;
 	cin>>n;
 	int sum=0;
 	for(int i=1;i<=n;i++){

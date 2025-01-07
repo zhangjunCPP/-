@@ -32,7 +32,7 @@ int find_pos2(int x){
 bool check(int pos,int id){
 	//The Car_id move to pos will detect?
 	int delta_x=p[pos]-a[id].d;
-    if(delta_x<0)return false;
+	if(delta_x<0)return false;
 	if(2*a[id].a*delta_x+a[id].v*a[id].v>V*V)return true;
 	return false;
 }
@@ -82,11 +82,11 @@ void solve(){
 			int tmp_x=floor(delta_x);
 			pos2=find_pos2(tmp_x);
 		}
-        bool flag=false;
-        for(int j=1;j<=pos2;j++){
-            if(check(j,i)){flag=true;break;}
-        }
-        ans1+=flag;
+		bool flag=false;
+		for(int j=1;j<=pos2;j++){
+			if(check(j,i)){flag=true;break;}
+		}
+		ans1+=flag;
 	}
 	cout<<ans1<<" ";
 

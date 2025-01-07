@@ -11,40 +11,40 @@ void add(int u,int v){
 }
 int siz[N],son[N],dep[N],fa[N];
 void dfs1(int u,int dad){
-    siz[u]=1;
-    dep[u]=dep[dad]+1;
-    fa[u]=dad;
-    for(int i=first[u];i;i=a[i].nex){
-        int v=a[i].v;
-        if(v==dad) continue;
-        dfs1(v,u);
-        siz[u]+=siz[v];
-        if(siz[v]>siz[son[u]]) son[u]=v;
-    }
+	siz[u]=1;
+	dep[u]=dep[dad]+1;
+	fa[u]=dad;
+	for(int i=first[u];i;i=a[i].nex){
+		int v=a[i].v;
+		if(v==dad) continue;
+		dfs1(v,u);
+		siz[u]+=siz[v];
+		if(siz[v]>siz[son[u]]) son[u]=v;
+	}
 }
 int top[N];
 void dfs2(int u){
-    if(son[u]){
-        int v=son[u];
-        top[v]=top[u];
-        dfs2(v);
-    }
-    for(int i=first[u];i;i=a[i].nex){
-        int v=a[i].v;
-        if(top[v]) continue;
-        top[v]=v;
-        dfs2(v);
-    }
+	if(son[u]){
+		int v=son[u];
+		top[v]=top[u];
+		dfs2(v);
+	}
+	for(int i=first[u];i;i=a[i].nex){
+		int v=a[i].v;
+		if(top[v]) continue;
+		top[v]=v;
+		dfs2(v);
+	}
 }
 int lca(int u,int v){
-    int x=top[u],y=top[v];
-    while(x!=y){
-        if(dep[x]<dep[y]){ swap(x,y), swap(u,v);}
-        u=fa[x];
-        x=top[u];
-    }
-    if(dep[u]>dep[v]) swap(u,v);
-    return u;
+	int x=top[u],y=top[v];
+	while(x!=y){
+		if(dep[x]<dep[y]){ swap(x,y), swap(u,v);}
+		u=fa[x];
+		x=top[u];
+	}
+	if(dep[u]>dep[v]) swap(u,v);
+	return u;
 }
 vector<int> query[N];
 int main(){

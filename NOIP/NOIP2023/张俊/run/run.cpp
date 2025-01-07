@@ -5,45 +5,45 @@ const int N=1e5+10;
 const int INF=1e18;
 int n,m,k,d;
 struct node{
-    int x,y,z;
+	int x,y,z;
 }q[N];
 int ans;
 bool vis[N];
 void dfs(int now,int sum){
-    if(sum>k) return;
-    if(now==n+1){
-        int tmp=0;
-        for(int i=1;i<=n;i++) tmp-=vis[i]*d;
-        for(int i=1;i<=m;i++) {
-            bool flag=true;
-            for(int j=q[i].x-q[i].y+1;j<=q[i].x;j++) {
-                if(!vis[j]) {flag=false;break;}
-            }
-            if(flag) tmp+=q[i].z;
-        }
-        ans=max(ans,tmp);
-        return;
-    }
-    if(sum<k){
-        vis[now]=true;
-        dfs(now+1,sum+1);
-    }
-    vis[now]=false;
-    dfs(now+1,0);
+	if(sum>k) return;
+	if(now==n+1){
+		int tmp=0;
+		for(int i=1;i<=n;i++) tmp-=vis[i]*d;
+		for(int i=1;i<=m;i++) {
+			bool flag=true;
+			for(int j=q[i].x-q[i].y+1;j<=q[i].x;j++) {
+				if(!vis[j]) {flag=false;break;}
+			}
+			if(flag) tmp+=q[i].z;
+		}
+		ans=max(ans,tmp);
+		return;
+	}
+	if(sum<k){
+		vis[now]=true;
+		dfs(now+1,sum+1);
+	}
+	vis[now]=false;
+	dfs(now+1,0);
 }
 void solve(){
-    ans=-INF;
-    cin>>n>>m>>k>>d;
-    for(int i=1;i<=m;i++) cin>>q[i].x>>q[i].y>>q[i].z;
-    dfs(1,0);
-    cout<<ans<<"\n";
+	ans=-INF;
+	cin>>n>>m>>k>>d;
+	for(int i=1;i<=m;i++) cin>>q[i].x>>q[i].y>>q[i].z;
+	dfs(1,0);
+	cout<<ans<<"\n";
 }
 signed main(){
-    freopen("run.in","r",stdin);
-    freopen("run.out","w",stdout);
-    int c,T;
-    cin>>c>>T;
-    while(T-- )solve();
+	freopen("run.in","r",stdin);
+	freopen("run.out","w",stdout);
+	int c,T;
+	cin>>c>>T;
+	while(T-- )solve();
 }
 
 

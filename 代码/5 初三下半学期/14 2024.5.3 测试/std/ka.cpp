@@ -162,8 +162,8 @@ inline void pk(int id1, int id2) {
 }
 
 int main() {
-    freopen("ka.in","r",stdin);
-    freopen("ka.out","w",stdout);
+	freopen("ka.in","r",stdin);
+	freopen("ka.out","w",stdout);
 	scanf("%d%d%d", &useless, &t, &n);
 	F(i, 1, n) {
 		cin >> a[i].name;

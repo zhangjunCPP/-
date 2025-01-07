@@ -51,8 +51,8 @@ struct node {
 vector<node> b;
 
 int main() {
-    freopen("ds.in","r",stdin);
-    freopen("ds.out","w",stdout);
+	freopen("ds.in","r",stdin);
+	freopen("ds.out","w",stdout);
 	n=read(), m=read();
 	init(m+n);
 	T=1, b.push_back({1, 1, 0});
@@ -70,5 +70,5 @@ int main() {
 			printf("%d\n", ans);
 		}
 	}
-    return 0;
+	return 0;
 }

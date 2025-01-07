@@ -19,56 +19,56 @@
 using namespace std;
 const int N=1e5+10;
 struct node{
-    int v,nex;
+	int v,nex;
 }a[N];
 int first[N],cnt;
 void add(int u,int v) {
-    a[++cnt]={v,first[u]};
-    first[u]=cnt;
+	a[++cnt]={v,first[u]};
+	first[u]=cnt;
 }
 vector<int> G[N];
 int d[N];
 bool vis1[N],vis2[N];
 void dfs(int u){
-    vis1[u]=true;
-    vis2[u]=true;
-    for(int i=first[u];i;i=a[i].nex){
-        int v=a[i].v;
-        if(!vis2[v]) {
-            d[v]++;
-            G[u].push_back(v);
-        }
-        if(!vis1[v]) dfs(v);
-    }
-    vis2[u]=false;
+	vis1[u]=true;
+	vis2[u]=true;
+	for(int i=first[u];i;i=a[i].nex){
+		int v=a[i].v;
+		if(!vis2[v]) {
+			d[v]++;
+			G[u].push_back(v);
+		}
+		if(!vis1[v]) dfs(v);
+	}
+	vis2[u]=false;
 }
 int query(int u,int v) {
-    cout<<"? "<<u<<" "<<v<<endl;
-    int ans;
-    cin>>ans;
-    return ans;
+	cout<<"? "<<u<<" "<<v<<endl;
+	int ans;
+	cin>>ans;
+	return ans;
 }
 int main(){
-    int n,m;
-    cin>>n>>m;
-    for(int i=1;i<=m;i++) {
-        int u,v;
-        cin>>u>>v;
-        add(u,v);
-    }
-    for(int i=1;i<=n;i++) if(!vis1[i]) dfs(i);
-    vector<int> ans;
-    for(int i=1;i<=n;i++) if(d[i]==0) ans.push_back(i);
-    while(ans.size()>1){
-        int u=ans.back();ans.pop_back();
-        int v=ans.back();ans.pop_back();
-        if(!query(u,v)) swap(u,v);
-        ans.push_back(u);
-        for(int i:G[v]) {
-            d[i]--;
-            if(d[i]==0) ans.push_back(i);
-        }
-    }
-    cout<<"! "<<ans.back()<<endl;
-    return 0;
+	int n,m;
+	cin>>n>>m;
+	for(int i=1;i<=m;i++) {
+		int u,v;
+		cin>>u>>v;
+		add(u,v);
+	}
+	for(int i=1;i<=n;i++) if(!vis1[i]) dfs(i);
+	vector<int> ans;
+	for(int i=1;i<=n;i++) if(d[i]==0) ans.push_back(i);
+	while(ans.size()>1){
+		int u=ans.back();ans.pop_back();
+		int v=ans.back();ans.pop_back();
+		if(!query(u,v)) swap(u,v);
+		ans.push_back(u);
+		for(int i:G[v]) {
+			d[i]--;
+			if(d[i]==0) ans.push_back(i);
+		}
+	}
+	cout<<"! "<<ans.back()<<endl;
+	return 0;
 }

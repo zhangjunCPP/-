@@ -48,8 +48,8 @@ void solve() {
 int T;
 
 int main() {
-    freopen("gz.in","r",stdin);
-    freopen("gz.out","w",stdout);
+	freopen("gz.in","r",stdin);
+	freopen("gz.out","w",stdout);
 	T=read();
 	while (T--) solve();
 	return 0;

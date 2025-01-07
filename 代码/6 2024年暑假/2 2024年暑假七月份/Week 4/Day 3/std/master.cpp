@@ -5,11 +5,11 @@
 using namespace std ;
 
 IL int gi(){
-    int data = 0 , m = 1; char ch = 0;
-    while(ch!='-' && (ch<'0'||ch>'9')) ch = getchar();
-    if(ch == '-'){m = 0 ; ch = getchar() ; }
-    while(ch >= '0' && ch <= '9'){data = (data<<1) + (data<<3) + (ch^48) ; ch = getchar(); }
-    return (m) ? data : -data ; 
+	int data = 0 , m = 1; char ch = 0;
+	while(ch!='-' && (ch<'0'||ch>'9')) ch = getchar();
+	if(ch == '-'){m = 0 ; ch = getchar() ; }
+	while(ch >= '0' && ch <= '9'){data = (data<<1) + (data<<3) + (ch^48) ; ch = getchar(); }
+	return (m) ? data : -data ; 
 }
 
 int ans[_],par[18][_],up[18][_],dn[18][_],dep[_],oo,n,Q,dfn[_],ed[_],f[_],q[_],K,h[_],g[_] ;
@@ -165,7 +165,7 @@ int main() {
 		for(int j = 1,lt = K; j < lt; j ++) q[++ K] = GetLCA(q[j] , q[j + 1]) ; q[++ K] = 1 ;
 		sort(q + 1 , q + K + 1 , cmp_dfn) ;
 		K = unique(q + 1 , q + K + 1) - q - 1 ;
-	    stk[0] = 0 ;
+		stk[0] = 0 ;
 		for(int i = 1; i <= K; i ++) {
 			while(stk[0] && ed[stk[stk[0]]] < dfn[q[i]]) -- stk[0] ;
 			if(stk[0]) AddEdge(stk[stk[0]] , q[i]) , AddEdge(q[i] , stk[stk[0]]) ; stk[++ stk[0]] = q[i] ;

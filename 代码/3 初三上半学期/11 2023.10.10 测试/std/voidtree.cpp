@@ -271,5 +271,5 @@ signed main() {
 		lstans = query(l, r, k); 
 		cout << lstans << endl;
 	}
-    return 0;
+	return 0;
 }

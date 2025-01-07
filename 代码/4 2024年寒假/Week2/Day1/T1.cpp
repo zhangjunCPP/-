@@ -14,21 +14,21 @@ const int N=1e5+10;
 int a[N];
 map<int,int> mp;
 signed main(){
-    ios::sync_with_stdio(false);
-    cin.tie(0),cout.tie(0);
-    int n;
-    cin>>n;
-    for(int i=1;i<=n;i++) cin>>a[i];
-    for(int i=1;i<=n;i++){
-        for(int j=2;j*j<=a[i];j++){
-            if(a[i]%j==0){
-                mp[j]+=a[i];
-                if(j*j!=a[i]) mp[a[i]/j]+=a[i];
-            }
-        }
-        if(a[i]!=1) mp[a[i]]+=a[i];
-    }
-    int ans=0;
-    for(auto i:mp) ans=max(ans,i.second);
-    cout<<ans;
+	ios::sync_with_stdio(false);
+	cin.tie(0),cout.tie(0);
+	int n;
+	cin>>n;
+	for(int i=1;i<=n;i++) cin>>a[i];
+	for(int i=1;i<=n;i++){
+		for(int j=2;j*j<=a[i];j++){
+			if(a[i]%j==0){
+				mp[j]+=a[i];
+				if(j*j!=a[i]) mp[a[i]/j]+=a[i];
+			}
+		}
+		if(a[i]!=1) mp[a[i]]+=a[i];
+	}
+	int ans=0;
+	for(auto i:mp) ans=max(ans,i.second);
+	cout<<ans;
 }

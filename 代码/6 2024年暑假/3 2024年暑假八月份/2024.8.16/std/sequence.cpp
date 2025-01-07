@@ -41,8 +41,8 @@ ll C(ll n,ll m) {
 }
 
 int main() {
-    freopen("sequence.in","r",stdin);
-    freopen("sequence.out","w",stdout);
+	freopen("sequence.in","r",stdin);
+	freopen("sequence.out","w",stdout);
 	ios::sync_with_stdio(false);
 	cin.tie(0), cout.tie(0);
 	cin>>n>>k;

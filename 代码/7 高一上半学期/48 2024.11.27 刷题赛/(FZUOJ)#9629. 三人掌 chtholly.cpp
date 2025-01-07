@@ -72,10 +72,10 @@ int qpow(int x,int y){
 }
 int fac[N],inv[N];
 void init(){
-    fac[0]=inv[0]=1;
-    for(int i=1;i<N;i++) fac[i]=fac[i-1]*i%mod;
-    inv[N-1]=qpow(fac[N-1],mod-2);
-    for(int i=N-2;i>=1;i--) inv[i]=inv[i+1]*(i+1)%mod;
+	fac[0]=inv[0]=1;
+	for(int i=1;i<N;i++) fac[i]=fac[i-1]*i%mod;
+	inv[N-1]=qpow(fac[N-1],mod-2);
+	for(int i=N-2;i>=1;i--) inv[i]=inv[i+1]*(i+1)%mod;
 }
 int C(int x,int y){return fac[x]*inv[y]%mod*inv[x-y]%mod;}
 signed main(){

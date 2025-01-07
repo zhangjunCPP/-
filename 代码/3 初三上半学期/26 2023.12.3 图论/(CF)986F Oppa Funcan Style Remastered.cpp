@@ -1,18 +1,18 @@
 /*
-Ê×ÏÈ£¬ÌâÄ¿ÒªÇóÎÒÃÇ½«n·ÖÎªÈô¸É¸ö $k$ µÄÒòÊýµÄºÍ£¬ÆäÊµ¾ÍÊÇ½« $n$ ·ÖÎªÈô¸É¸ö $k$ µÄ**ÖÊ**ÒòÊýµÄºÍ¡£
+ï¿½ï¿½ï¿½È£ï¿½ï¿½ï¿½Ä¿Òªï¿½ï¿½ï¿½ï¿½ï¿½Ç½ï¿½nï¿½ï¿½Îªï¿½ï¿½ï¿½É¸ï¿½ $k$ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÄºÍ£ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½Ç½ï¿½ $n$ ï¿½ï¿½Îªï¿½ï¿½ï¿½É¸ï¿½ $k$ ï¿½ï¿½**ï¿½ï¿½**ï¿½ï¿½ï¿½ï¿½ï¿½ÄºÍ¡ï¿½
 
-·¢ÏÖ£¬ÕâºÜÏñ [P3403ÌøÂ¥»ú](https://www.luogu.com.cn/problem/P3403)¡£
+ï¿½ï¿½ï¿½Ö£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ [P3403ï¿½ï¿½Â¥ï¿½ï¿½](https://www.luogu.com.cn/problem/P3403)ï¿½ï¿½
 
-µ«ÊÇ£¬ÕâÒªÇó $k$ µÄÖÊÒòÊý´óÓÚµÈÓÚÈý¸ö£¬Òò´ËÕâÆô·¢ÎÒÃÇÒª·ÖÀàÌÖÂÛ¡£
+ï¿½ï¿½ï¿½Ç£ï¿½ï¿½ï¿½Òªï¿½ï¿½ $k$ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Û¡ï¿½
 
-1. $k$ Ã»ÓÐÖÊÒòÊý£¬Ö»ÓÐ1¡£
-2. $k$ Ö»ÓÐ1µÄÖÊÒòÊý¼´Ëü×Ô¼º£¬´ËÊ±£¬$n$ ÒªÎª $k$ µÄ±¶Êý¡£
-3. $k$ ÓÐÁ½¸öÖÊÒòÊý¡£
-   ÔòÒªÇóÎÒÃÇÅÐ¶Ï $ax+by=n$ ÊÇ·ñÓÐ½â¡£Õâ¸öÊÇ±È½ÏºÃÅÐ¶ÏµÄ¡£
-   µ±ÇÒ½öµ± $n\times b^{-1} (\mod a\ ) \ \times b \le n$
-4. $k$ ÓÐÈý¸ö¼°ÒÔÉÏµÄÖÊÒòÊý£¬Ö±½Ó°´ÕÕ[P3403ÌøÂ¥»ú](https://www.luogu.com.cn/problem/P3403)×ö¼´¿É¡£
+1. $k$ Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½1ï¿½ï¿½
+2. $k$ Ö»ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½$n$ ÒªÎª $k$ ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½
+3. $k$ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+   ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ $ax+by=n$ ï¿½Ç·ï¿½ï¿½Ð½â¡£ï¿½ï¿½ï¿½ï¿½Ç±È½Ïºï¿½ï¿½Ð¶ÏµÄ¡ï¿½
+   ï¿½ï¿½ï¿½Ò½ï¿½ï¿½ï¿½ $n\times b^{-1} (\mod a\ ) \ \times b \le n$
+4. $k$ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö±ï¿½Ó°ï¿½ï¿½ï¿½[P3403ï¿½ï¿½Â¥ï¿½ï¿½](https://www.luogu.com.cn/problem/P3403)ï¿½ï¿½ï¿½ï¿½ï¿½É¡ï¿½
 
-×¢Òâ£¬ÓÉÓÚ $k$ µÄÈ¡ÖµÖ»ÓÐ50ÖÖ£¬¶ø $t\le 10^4$£¬ËµÃ÷ÓÐºÜ¶àÖØ¸´µÄ $k$ £¬Òò´ËÎÒÃÇÐèÒªÀëÏß
+×¢ï¿½â£¬ï¿½ï¿½ï¿½ï¿½ $k$ ï¿½ï¿½È¡ÖµÖ»ï¿½ï¿½50ï¿½Ö£ï¿½ï¿½ï¿½ $t\le 10^4$ï¿½ï¿½Ëµï¿½ï¿½ï¿½ÐºÜ¶ï¿½ï¿½Ø¸ï¿½ï¿½ï¿½ $k$ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½
 
 */
 #include<bits/stdc++.h>
@@ -25,23 +25,23 @@ bool ans[M];
 
 int prime[M],vis[N],tot;
 void init(){
-    for(int i=2;i<N;i++){
-        if(!vis[i]) prime[++tot]=i;
-        for(int j=1;j<=tot&&i*prime[j]<N;j++){
-            vis[i*prime[j]]=true;
-            if(i%prime[j]==0) break;
-        }
-    }
+	for(int i=2;i<N;i++){
+		if(!vis[i]) prime[++tot]=i;
+		for(int j=1;j<=tot&&i*prime[j]<N;j++){
+			vis[i*prime[j]]=true;
+			if(i%prime[j]==0) break;
+		}
+	}
 }
 
 ll qpow(ll x,ll y,ll mod){
-    ll ans=1;
-    while(y) {
-        if(y&1) ans=ans*x%mod;
-        y>>=1;
-        x=x*x%mod;
-    }
-    return ans;
+	ll ans=1;
+	while(y) {
+		if(y&1) ans=ans*x%mod;
+		y>>=1;
+		x=x*x%mod;
+	}
+	return ans;
 }
 
 ll a[M];
@@ -49,75 +49,75 @@ ll dis[M];
 bool vis2[M];
 queue<ll> q;
 signed main(){
-    init();
+	init();
 
-    int T;
-    cin>>T;
-    for(int i=1;i<=T;i++) {
-        ll x,y;
-        cin>>x>>y;
-        mp[y].push_back({x,i});
-    }
-    for(auto now:mp) {
-        ll k=now.first;
-        if(k==1) continue;
+	int T;
+	cin>>T;
+	for(int i=1;i<=T;i++) {
+		ll x,y;
+		cin>>x>>y;
+		mp[y].push_back({x,i});
+	}
+	for(auto now:mp) {
+		ll k=now.first;
+		if(k==1) continue;
 
-        ll sum=0;
-        ll tmp=k;        
-        
-        for(int i=1;i<=tot&&prime[i]*prime[i]<=tmp;i++){
-            if(tmp%prime[i]==0){
-                sum++;
-                a[sum]=prime[i];
-                while(tmp%prime[i]==0) tmp/=prime[i];
-            }
-        } 
+		ll sum=0;
+		ll tmp=k;		
+		
+		for(int i=1;i<=tot&&prime[i]*prime[i]<=tmp;i++){
+			if(tmp%prime[i]==0){
+				sum++;
+				a[sum]=prime[i];
+				while(tmp%prime[i]==0) tmp/=prime[i];
+			}
+		} 
 
-        if(tmp>1) sum++,a[sum]=tmp;
-        if(sum==1) {
-            for(auto it:now.second){
-                if(it.first%k==0) ans[it.second]=true;
-                else ans[it.second]=false;
-            }
-        }
-        else if(sum==2) {
-            for(auto it:now.second){
-                ll n=it.first;
-                if(n%a[1]==0||n%a[2]==0) {ans[it.second]=true;continue;}
-                if(( (n%a[1]) * qpow(a[2],a[1]-2,a[1])%a[1] )%a[1]*a[2]<=n){ans[it.second]=true;continue;}
-                ans[it.second]=false;
-            }
-        }
-        else {
-            // ÒÔ a[1] ×÷ÎªÄ£Êý
-            for(int i=0;i<a[1];i++) {
-                vis2[i]=false;
-                dis[i]=1e18+10;
-            }
-            dis[0]=0;
-            vis2[0]=true;
-            q.push(0);
-            while(!q.empty()){
-                int u=q.front();
-                q.pop();
-                vis2[u]=false;
-                for(int i=2;i<=sum;i++) {
-                    if(dis[(u+a[i])%a[1]]>dis[u]+a[i]) {
-                        dis[(u+a[i])%a[1]]=dis[u]+a[i];
-                        if(!vis2[(u+a[i])%a[1]]) q.push((u+a[i])%a[1]),vis2[(u+a[i])%a[1]]=true;
-                    }
-                }
-            }
-            for(auto it:now.second){
-                int n=it.first;
-                if(dis[n%a[1]]<=n) ans[it.second]=true;
-                else ans[it.second]=false;
-            }
-        }
-    }
-    for(int i=1;i<=T;i++) {
-        if(ans[i]) printf("YES\n");
-        else printf("NO\n");
-    }
-    return 0;
+		if(tmp>1) sum++,a[sum]=tmp;
+		if(sum==1) {
+			for(auto it:now.second){
+				if(it.first%k==0) ans[it.second]=true;
+				else ans[it.second]=false;
+			}
+		}
+		else if(sum==2) {
+			for(auto it:now.second){
+				ll n=it.first;
+				if(n%a[1]==0||n%a[2]==0) {ans[it.second]=true;continue;}
+				if(( (n%a[1]) * qpow(a[2],a[1]-2,a[1])%a[1] )%a[1]*a[2]<=n){ans[it.second]=true;continue;}
+				ans[it.second]=false;
+			}
+		}
+		else {
+			// ï¿½ï¿½ a[1] ï¿½ï¿½ÎªÄ£ï¿½ï¿½
+			for(int i=0;i<a[1];i++) {
+				vis2[i]=false;
+				dis[i]=1e18+10;
+			}
+			dis[0]=0;
+			vis2[0]=true;
+			q.push(0);
+			while(!q.empty()){
+				int u=q.front();
+				q.pop();
+				vis2[u]=false;
+				for(int i=2;i<=sum;i++) {
+					if(dis[(u+a[i])%a[1]]>dis[u]+a[i]) {
+						dis[(u+a[i])%a[1]]=dis[u]+a[i];
+						if(!vis2[(u+a[i])%a[1]]) q.push((u+a[i])%a[1]),vis2[(u+a[i])%a[1]]=true;
+					}
+				}
+			}
+			for(auto it:now.second){
+				int n=it.first;
+				if(dis[n%a[1]]<=n) ans[it.second]=true;
+				else ans[it.second]=false;
+			}
+		}
+	}
+	for(int i=1;i<=T;i++) {
+		if(ans[i]) printf("YES\n");
+		else printf("NO\n");
+	}
+	return 0;
 }

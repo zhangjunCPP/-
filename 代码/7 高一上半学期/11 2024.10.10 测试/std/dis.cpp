@@ -5,10 +5,10 @@ template<typename tp>inline void chemx(tp &a,tp b){a<b?a=b:0;}
 template<typename tp>inline void chemn(tp &a,tp b){a>b?a=b:0;}
 inline int read()
 {
-    int x=0,w=0;char ch=0;
-    while(!isdigit(ch)){w|=ch=='-';ch=getchar();}
-    while(isdigit(ch)){x=(x<<1)+(x<<3)+(ch^48);ch=getchar();}
-    return w?-x:x;
+	int x=0,w=0;char ch=0;
+	while(!isdigit(ch)){w|=ch=='-';ch=getchar();}
+	while(isdigit(ch)){x=(x<<1)+(x<<3)+(ch^48);ch=getchar();}
+	return w?-x:x;
 }
 const int N=200005;
 int n,inc[N],id[N],cirlen,vis[N],fa[N],findcircle,d[N],odis[N],mxd[N],a[N],ans[N];
@@ -78,26 +78,26 @@ void dfs2(int u,int fa,int up){
 void calc_circle(int *a,int n,int *id){
 	for(int i=1;i<=n;i++)
 		ans[id[i]]=max(ans[id[i]],a[i]);
-    static int pre[N+5],suf[N+5];
-    pre[0]=suf[n+1]=-(1<<29);
-    for(int i=1;i<=n;i++)
-        pre[i]=max(pre[i-1],a[i]-i);
-    for(int i=n;i;i--)
-        suf[i]=max(suf[i+1],a[i]+i);
-    for(int i=1;i<=n;i++)
-        ans[id[i]]=max({ans[id[i]],pre[i]+suf[i+1],pre[i-1]+suf[i]});
-    int mxi=-(1<<29),mxj=-(1<<29);
-    for(int i=1;i<=n;i++){
-        mxj=max(mxj,mxi+a[i]-i+n);
-        mxi=max(mxi,a[i]+i);
-        ans[id[i]]=max(ans[id[i]],mxj);
-    }
-    mxi=mxj=-(1<<29);
-    for(int i=n;i;i--){
-        mxj=max(mxj,mxi+a[i]+i+n);
-        mxi=max(mxi,a[i]-i);
-        ans[id[i]]=max(ans[id[i]],mxj);
-    }
+	static int pre[N+5],suf[N+5];
+	pre[0]=suf[n+1]=-(1<<29);
+	for(int i=1;i<=n;i++)
+		pre[i]=max(pre[i-1],a[i]-i);
+	for(int i=n;i;i--)
+		suf[i]=max(suf[i+1],a[i]+i);
+	for(int i=1;i<=n;i++)
+		ans[id[i]]=max({ans[id[i]],pre[i]+suf[i+1],pre[i-1]+suf[i]});
+	int mxi=-(1<<29),mxj=-(1<<29);
+	for(int i=1;i<=n;i++){
+		mxj=max(mxj,mxi+a[i]-i+n);
+		mxi=max(mxi,a[i]+i);
+		ans[id[i]]=max(ans[id[i]],mxj);
+	}
+	mxi=mxj=-(1<<29);
+	for(int i=n;i;i--){
+		mxj=max(mxj,mxi+a[i]+i+n);
+		mxi=max(mxi,a[i]-i);
+		ans[id[i]]=max(ans[id[i]],mxj);
+	}
 }
 int main(){
 	n=read();int m=read();

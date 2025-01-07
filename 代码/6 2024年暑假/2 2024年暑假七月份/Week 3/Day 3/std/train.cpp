@@ -43,15 +43,15 @@ namespace FastIO {
 template <typename T>
 inline void read(T& res)
 {
-    char ch;
-    bool flg = 0;
-    while (!isdigit(ch = get_next_char()))
-        flg |= ch == '-';
-    res = ch ^ '0';
-    while (isdigit(ch = get_next_char()))
-        res = (res << 3) + (res << 1) + (ch ^ '0');
-    if (flg)
-        res = -res;
+	char ch;
+	bool flg = 0;
+	while (!isdigit(ch = get_next_char()))
+		flg |= ch == '-';
+	res = ch ^ '0';
+	while (isdigit(ch = get_next_char()))
+		res = (res << 3) + (res << 1) + (ch ^ '0');
+	if (flg)
+		res = -res;
 }
 #endif
 	template<typename T>

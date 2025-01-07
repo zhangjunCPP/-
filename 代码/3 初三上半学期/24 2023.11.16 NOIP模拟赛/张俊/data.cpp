@@ -5,7 +5,7 @@ int random(int l,int r){
 }
 int main(){
 	freopen("cut.in","w",stdout);
-    srand(time(NULL));
+	srand(time(NULL));
 	int n=random(1,25);
 	int k=random(1,n);
 	cout<<n<<" "<<k<<"\n";

@@ -7,12 +7,12 @@ namespace Base{
 	const int inf = 0x3f3f3f3f, INF = 0x7fffffff;
 	const ll  infll = 0x3f3f3f3f3f3f3f3fll, INFll = 0x7fffffffffffffffll;
 	template<typename T> void read(T &x){
-    	x = 0; int fh = 1; double num = 1.0; char ch = getchar();
+		x = 0; int fh = 1; double num = 1.0; char ch = getchar();
 		while (!isdigit(ch)){ if (ch == '-') fh = -1; ch = getchar(); }
 		while (isdigit(ch)){ x = x * 10 + ch - '0'; ch = getchar(); }
-	    if (ch == '.'){
-	    	ch = getchar();
-	    	while (isdigit(ch)){num /= 10; x = x + num * (ch - '0'); ch = getchar();}
+		if (ch == '.'){
+			ch = getchar();
+			while (isdigit(ch)){num /= 10; x = x + num * (ch - '0'); ch = getchar();}
 		}
 		x = x * fh;
 	}
@@ -43,6 +43,6 @@ int main(){
 	}
 	for (int i = 1; i <= n; i++)
 		printf("%d\n", ans[i] - ans[i - 1]);
-    return 0;
+	return 0;
 }
 

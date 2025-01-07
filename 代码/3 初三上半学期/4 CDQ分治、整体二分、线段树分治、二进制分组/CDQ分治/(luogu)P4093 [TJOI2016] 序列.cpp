@@ -5,7 +5,7 @@ struct node{
 	int val,mx,mn,ans;
 }a[N+10];
 int n,m;
-//dp[i]=max{dp[j]}+1    j<i&&a[j].mx<=a[i].val&&a[j].val<=a[i].mn 
+//dp[i]=max{dp[j]}+1	j<i&&a[j].mx<=a[i].val&&a[j].val<=a[i].mn 
 int tree[N+10];
 int lowbit(int x){return x&(-x);}
 void add(int x,int y){for(int i=x;i<=N;i+=lowbit(i)) tree[i]=max(tree[i],y);}

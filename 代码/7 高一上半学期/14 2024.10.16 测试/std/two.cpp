@@ -82,10 +82,10 @@ inline void solve(){
 						}
 						s+=sum[xrr][yrr]+sum[xll-1][yll-1]-sum[xrr][yll-1]-sum[xll-1][yrr];
 						// for(int i=1;i<=k;i++){
-						//     if(xl<=x[i] && x[i]<=xr && yl<=y[i] && y[i]<=yr){
-						//         if((x[i]+y[i])%2) s-=2;
-						//         else s+=2;
-						//     }
+						//	 if(xl<=x[i] && x[i]<=xr && yl<=y[i] && y[i]<=yr){
+						//		 if((x[i]+y[i])%2) s-=2;
+						//		 else s+=2;
+						//	 }
 						// }
 						ans=max(ans,abs(s));
 					}

@@ -4,20 +4,20 @@ const int N=1e5+10;
 vector<int> G[N];
 int depth[N],fa[N][20],siz[N];
 void dfs(int u,int dad){
-    depth[u]=depth[dad]+1;fa[u][0]=dad;siz[u]=1;
-    for(int i=1;i<=17;i++)fa[u][i]=fa[fa[u][i-1]][i-1];
-    for(int v:G[u]){
-        if(v==dad) continue;
-        dfs(v,u);
-        siz[u]+=siz[v];
-    }
+	depth[u]=depth[dad]+1;fa[u][0]=dad;siz[u]=1;
+	for(int i=1;i<=17;i++)fa[u][i]=fa[fa[u][i-1]][i-1];
+	for(int v:G[u]){
+		if(v==dad) continue;
+		dfs(v,u);
+		siz[u]+=siz[v];
+	}
 }
 int LCA(int x,int y){
-    if(depth[x]<depth[y]) swap(x,y);
-    for(int i=17;i>=0;i--)if(depth[fa[x][i]]>=depth[y]) x=fa[x][i];
-    if(x==y) return x;
-    for(int i=17;i>=0;i--)if(fa[x][i]!=fa[y][i])x=fa[x][i],y=fa[y][i];
-    return fa[x][0];
+	if(depth[x]<depth[y]) swap(x,y);
+	for(int i=17;i>=0;i--)if(depth[fa[x][i]]>=depth[y]) x=fa[x][i];
+	if(x==y) return x;
+	for(int i=17;i>=0;i--)if(fa[x][i]!=fa[y][i])x=fa[x][i],y=fa[y][i];
+	return fa[x][0];
 }
 bool del[N],vis[N];
 int siz2[N];

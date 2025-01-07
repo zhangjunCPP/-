@@ -25,8 +25,8 @@ void solve(){
 	cout<<"\n";
 }
 signed main(){
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr),cout.tie(nullptr);
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr),cout.tie(nullptr);
 	int T;
 	cin>>T;
 	while(T--)solve();

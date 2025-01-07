@@ -13,10 +13,10 @@ void add(int u,int v,int w){
 	first[u]=cnt; 
 }
 struct node2{
-    int id,val;
-    bool operator<(const node2 &oth) const {
-        return val>oth.val;
-    }
+	int id,val;
+	bool operator<(const node2 &oth) const {
+		return val>oth.val;
+	}
 };
 int dis[N];
 bool vis[N];
@@ -25,19 +25,19 @@ void dij(int s){
 	memset(vis,0,sizeof vis);
 	priority_queue<node2> q;
 	dis[s]=0; 
-    q.push({s,0});
+	q.push({s,0});
 	while(!q.empty()){
 		auto now=q.top(); 
-        q.pop();
-        int u=now.id;
+		q.pop();
+		int u=now.id;
 		if(vis[u]) continue;
 		vis[u]=1;
 		for(int i=first[u];i;i=a[i].nex){
 			int v=a[i].v;
 			if(dis[v]>dis[u]+a[i].w){
-                dis[v]=dis[u]+a[i].w;
-                q.push({v,dis[v]});
-            }
+				dis[v]=dis[u]+a[i].w;
+				q.push({v,dis[v]});
+			}
 		}
 	}
 }
@@ -45,11 +45,11 @@ void dij(int s){
 queue<int> s[N];
 int dis2[N];
 void bfs(int c){
-    int tmp=0;
+	int tmp=0;
 	for(int i=0;i<=tmp;i++){
 		while(!s[i].empty()){
 			int now=s[i].front();
-            s[i].pop();
+			s[i].pop();
 			if(dis2[now]<i) continue;
 			for(int j=first[now];j;j=a[j].nex){
 				int v=a[j].v;
@@ -62,32 +62,32 @@ void bfs(int c){
 				}
 			}
 		}
-    }
+	}
 }
 signed main(){
-    ios::sync_with_stdio(false);
-    cin.tie(0);
-    cout.tie(0);
-    int q;
-    cin>>n>>m>>q;
+	ios::sync_with_stdio(false);
+	cin.tie(0);
+	cout.tie(0);
+	int q;
+	cin>>n>>m>>q;
 	for(int i=1;i<=m;i++) {
 		int u,v,w;
-        cin>>u>>v>>w;
+		cin>>u>>v>>w;
 		add(u,v,w); 
 	}
 	dij(1);
 	while(q--){
 		int opt,v;
-        cin>>opt>>v;
+		cin>>opt>>v;
 		if(opt==1){ 
-            if(dis[v]==INF)cout<<"-1\n";
-            else cout<<dis[v]<<"\n";
-        }
+			if(dis[v]==INF)cout<<"-1\n";
+			else cout<<dis[v]<<"\n";
+		}
 		else{
 			for(int i=1;i<=v;i++){int tmp;cin>>tmp;a[tmp].w++;}
 			memset(dis2,0x3f,sizeof dis2);
 			dis2[1]=0; 
-            s[0].push(1);
+			s[0].push(1);
 			bfs(v);
 			for(int i=1;i<=n;i++) dis[i]=min(INF,dis[i]+dis2[i]);
 		}

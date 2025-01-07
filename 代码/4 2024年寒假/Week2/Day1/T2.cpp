@@ -20,29 +20,29 @@ const int N=2e5+10;
 vector<int> G[N];
 ull mx1[N],mx2[N];//子树第一大与第二大 （第一大要加上自己）
 void dfs(int u){
-    int Mx1=0,Mx2=0;
-    for(int v:G[u]){
-        dfs(v);
-        if(mx1[v]>Mx1) Mx2=Mx1,Mx1=mx1[v];
-        else if(mx1[v]>Mx2) Mx2=mx1[v];
-    }
-    mx1[u]=Mx1+1,mx2[u]=Mx2;
+	int Mx1=0,Mx2=0;
+	for(int v:G[u]){
+		dfs(v);
+		if(mx1[v]>Mx1) Mx2=Mx1,Mx1=mx1[v];
+		else if(mx1[v]>Mx2) Mx2=mx1[v];
+	}
+	mx1[u]=Mx1+1,mx2[u]=Mx2;
 }
 int main(){
-    int n,m;
-    cin>>n>>m;
-    for(int i=2;i<=n;i++){
-        int x;
-        cin>>x;
-        G[x].push_back(i);
-    }
-    dfs(1);
-    ull tmp=mx1[1];
-    ull ans=tmp*m;
-    for(int i=1;i<=n;i++) {
-        if(mx2[i])ans=max(ans,tmp*(2*m-2)+mx1[i]+mx2[i]);
-    }
-    cout<<ans;
+	int n,m;
+	cin>>n>>m;
+	for(int i=2;i<=n;i++){
+		int x;
+		cin>>x;
+		G[x].push_back(i);
+	}
+	dfs(1);
+	ull tmp=mx1[1];
+	ull ans=tmp*m;
+	for(int i=1;i<=n;i++) {
+		if(mx2[i])ans=max(ans,tmp*(2*m-2)+mx1[i]+mx2[i]);
+	}
+	cout<<ans;
 }
 
 /*

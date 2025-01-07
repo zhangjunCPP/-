@@ -8,7 +8,7 @@ struct node {
 	int w,l;
 } a[N];
 bool cmp(node a,node b){
-    return a.l==b.l?a.w>b.w:a.l>b.l;
+	return a.l==b.l?a.w>b.w:a.l>b.l;
 }
 int X(int i,int j){return a[i+1].l-a[j+1].l;}
 int Y(int i,int j){return dp[j]-dp[i];}

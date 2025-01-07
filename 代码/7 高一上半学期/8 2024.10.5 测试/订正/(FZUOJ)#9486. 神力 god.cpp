@@ -23,7 +23,7 @@ signed main(){
 	for(int i=1;i<=n;i++)cin>>a[i];
 	dp[n+1][0+n+1]=1;
 	for(int i=n;i;i--){
-		for(int j=-n+n+1;j<=n+n+1;j++)dp[i][j]=(dp[i+1][j]*p%mod+dp[i+1][j+a[i]]*q%mod)%mod;        
+		for(int j=-n+n+1;j<=n+n+1;j++)dp[i][j]=(dp[i+1][j]*p%mod+dp[i+1][j+a[i]]*q%mod)%mod;		
 		dp[i][0+n+1]=1;
 	}
 	for(int i=n+n+1;i>=-n+n+1;i--)cout<<dp[1][i]<<" ";

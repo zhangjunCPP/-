@@ -44,31 +44,31 @@ int mp[N][N];
 pair<int,int> A[N*N],B[N*N];
 int cnt1,cnt2;
 int main() {
-//    freopen("T3.in","r",stdin);
-//    freopen("T3.out","w",stdout);
-    int n,m,k;
-    cin>>n>>m>>k;
-    if(min(n,m)<k){
-        for(int i=1;i<=n;i++)for(int j=1;j<=m;j++)cout<<i<<" "<<j<<"\n";
-        return 0;
-    }
-    if(k<=2) {puts("-1");return 0;}
-    for(int i=1;i<=500;i++) for(int j=1+2*(i&1);j<=500;j+=4)mp[i][j]=mp[i][j+1]=1;//以两个点为整体黑白染色。
-//    for(int i=1;i<=n;i++){
-//        for (int j=1;j<=m;j++)cout<<mp[i][j]<<" ";
-//        cout<<"\n";
-//    }
-//    cout<<"-------\n";
-    for(int i=1;i<=n;i++){
-        for(int j=1;j<=m;j++){
-            if(mp[i][j]) A[++cnt1]={i,j};
-            else B[++cnt2]={i,j};
-        }
-    }
-    while(cnt1&&cnt2){
-        cout<<A[cnt1].first<<" "<<A[cnt1].second<<"\n";cnt1--;
-        cout<<B[cnt2].first<<" "<<B[cnt2].second<<"\n";cnt2--;
-    }
-    if(cnt1)cout<<A[cnt1].first<<" "<<A[cnt1].second<<"\n";cnt1--;
-    if(cnt2)cout<<B[cnt2].first<<" "<<B[cnt2].second<<"\n";cnt2--;
+//	freopen("T3.in","r",stdin);
+//	freopen("T3.out","w",stdout);
+	int n,m,k;
+	cin>>n>>m>>k;
+	if(min(n,m)<k){
+		for(int i=1;i<=n;i++)for(int j=1;j<=m;j++)cout<<i<<" "<<j<<"\n";
+		return 0;
+	}
+	if(k<=2) {puts("-1");return 0;}
+	for(int i=1;i<=500;i++) for(int j=1+2*(i&1);j<=500;j+=4)mp[i][j]=mp[i][j+1]=1;//以两个点为整体黑白染色。
+//	for(int i=1;i<=n;i++){
+//		for (int j=1;j<=m;j++)cout<<mp[i][j]<<" ";
+//		cout<<"\n";
+//	}
+//	cout<<"-------\n";
+	for(int i=1;i<=n;i++){
+		for(int j=1;j<=m;j++){
+			if(mp[i][j]) A[++cnt1]={i,j};
+			else B[++cnt2]={i,j};
+		}
+	}
+	while(cnt1&&cnt2){
+		cout<<A[cnt1].first<<" "<<A[cnt1].second<<"\n";cnt1--;
+		cout<<B[cnt2].first<<" "<<B[cnt2].second<<"\n";cnt2--;
+	}
+	if(cnt1)cout<<A[cnt1].first<<" "<<A[cnt1].second<<"\n";cnt1--;
+	if(cnt2)cout<<B[cnt2].first<<" "<<B[cnt2].second<<"\n";cnt2--;
 }

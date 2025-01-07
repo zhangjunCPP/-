@@ -29,8 +29,8 @@ void dfs(int x,int fa){
 	}
 }
 int main(){
-    freopen("fgo.in","r",stdin);
-    freopen("fgo.out","w",stdout);
+	freopen("fgo.in","r",stdin);
+	freopen("fgo.out","w",stdout);
 	scanf("%d",&n);
 	for(int i=1;i<=n;++i){
 		for(int j=1;j<=3;++j) scanf("%d",&a[i][j]);

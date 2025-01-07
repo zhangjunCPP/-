@@ -55,8 +55,8 @@ char s[N];
 
 signed main()
 {
-    freopen("game.in","r",stdin);
-    freopen("game.out","w",stdout);
+	freopen("game.in","r",stdin);
+	freopen("game.out","w",stdout);
 	int t=read();
 	while(t--)
 	{

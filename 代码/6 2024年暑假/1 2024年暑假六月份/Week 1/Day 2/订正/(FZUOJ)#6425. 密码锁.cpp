@@ -59,12 +59,12 @@ map<string,int> mp;
 void solve(){
 	string s1,s2;
 	cin>>s1>>s2;
-    for(int i=0;i<n;i++){
-        s2[i]-=s1[i]-'0';
-        if(s2[i]-'0'<0)s2[i]+=10;
-        s1[i]='0';
-    }
-    if(mp.count(s2)){cout<<mp[s2]<<"\n";return;}
+	for(int i=0;i<n;i++){
+		s2[i]-=s1[i]-'0';
+		if(s2[i]-'0'<0)s2[i]+=10;
+		s1[i]='0';
+	}
+	if(mp.count(s2)){cout<<mp[s2]<<"\n";return;}
 	int ans=f(s1,s2);
 	while(!dfs(s1,s2,ans))ans++;
 	cout<<(mp[s2]=ans)<<"\n";

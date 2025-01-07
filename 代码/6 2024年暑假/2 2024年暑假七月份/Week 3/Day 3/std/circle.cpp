@@ -35,12 +35,12 @@ namespace FastIO {
 template <typename T>
 inline void read(T& res)
 {
-    char ch;
-    while (!isdigit(ch = get_next_char()))
-        ;
-    res = ch ^ '0';
-    while (isdigit(ch = get_next_char()))
-        res = (res << 3) + (res << 1) + (ch ^ '0');
+	char ch;
+	while (!isdigit(ch = get_next_char()))
+		;
+	res = ch ^ '0';
+	while (isdigit(ch = get_next_char()))
+		res = (res << 3) + (res << 1) + (ch ^ '0');
 }
 #else
 	template<typename T>
@@ -138,12 +138,12 @@ constexpr int qpow(int x,int y) {
 constexpr int iP=qpow(P,mod-2);
 static_assert(1ll*P*iP%mod==1,"qwq");
 // class Chunk0{
-//     int n,a[N];
-//     int query(int x) { int res=0; For(i,1,x) res=(res+a[i])%mod;; return res; }
+//	 int n,a[N];
+//	 int query(int x) { int res=0; For(i,1,x) res=(res+a[i])%mod;; return res; }
 // public:
-//     void init(int _n) { n=_n; For(i,1,n) a[i]=0; }
-//     void modify(int x,int y) { a[x]=y; }
-//     int query(int l,int r) { return (query(r)-query(l-1)+mod)%mod; }
+//	 void init(int _n) { n=_n; For(i,1,n) a[i]=0; }
+//	 void modify(int x,int y) { a[x]=y; }
+//	 int query(int l,int r) { return (query(r)-query(l-1)+mod)%mod; }
 // }O1,O2,O3;
 class Chunk1 {
 	int n,a[N],s[N];
@@ -252,13 +252,13 @@ signed main() {
 	For(i,1,Q) if(qop[i]==2)
 		cout<<(ans[i]?"YES\n":"NO\n");
 	// For(id,1,Q){
-	//     if(qop[id]==1) a[ql[id]]=qx[id];
-	//     else{
-	//         int l=ql[id],r=qr[id],k=qx[id]; assert((r-l+1)%k==0);
-	//         int s0=0; For(i,l,r) if(i%k==0) s0=(s0+a[i])%mod;
-	//         int ss=0; For(i,l,r) ss=(ss+1ll*a[i]*pw[i%k])%mod;
-	//         if(ss==1ll*s0*spw[k-1]%mod) cout<<"YES\n"; else cout<<"NO\n";
-	//     }
+	//	 if(qop[id]==1) a[ql[id]]=qx[id];
+	//	 else{
+	//		 int l=ql[id],r=qr[id],k=qx[id]; assert((r-l+1)%k==0);
+	//		 int s0=0; For(i,l,r) if(i%k==0) s0=(s0+a[i])%mod;
+	//		 int ss=0; For(i,l,r) ss=(ss+1ll*a[i]*pw[i%k])%mod;
+	//		 if(ss==1ll*s0*spw[k-1]%mod) cout<<"YES\n"; else cout<<"NO\n";
+	//	 }
 	// }
 	return 0;
 }

@@ -10,7 +10,7 @@ double f(int u,int v,double mid){return abss(a[u].z-a[v].z)-mid*w(u,v);}
 bool vis[N];
 double dis[N];
 bool check(double mid){
-    for(int i=1;i<=n;i++)dis[i]=1e9,vis[i]=false;
+	for(int i=1;i<=n;i++)dis[i]=1e9,vis[i]=false;
 	dis[1]=0;
 	int tot=0;
 	double ans=0;
@@ -25,21 +25,21 @@ bool check(double mid){
 			if(dis[v]>f(u,v,mid))dis[v]=f(u,v,mid);
 		}
 	}
-    return ans<0;
+	return ans<0;
 }
 int main(){
-    scanf("%d",&n);
-    while(n){
-        for(int i=1;i<=n;i++)scanf("%d%d%d",&a[i].x,&a[i].y,&a[i].z);
-        double l=0,r=10000;
-        for(int i=1;i<=30;i++){
-            double mid=(l+r)/2;
-            if(check(mid))r=mid;
-            else l=mid;
-        }
-        printf("%.3lf\n",l);
-        scanf("%d",&n);
-    }
-    
-    return 0;
+	scanf("%d",&n);
+	while(n){
+		for(int i=1;i<=n;i++)scanf("%d%d%d",&a[i].x,&a[i].y,&a[i].z);
+		double l=0,r=10000;
+		for(int i=1;i<=30;i++){
+			double mid=(l+r)/2;
+			if(check(mid))r=mid;
+			else l=mid;
+		}
+		printf("%.3lf\n",l);
+		scanf("%d",&n);
+	}
+	
+	return 0;
 }

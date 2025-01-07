@@ -3,7 +3,7 @@
 using namespace std;
 const int mod=998244353;
 const int N=6e3+10;
-int n,m;    
+int n,m;	
 int qpow(int x,int y){
 	int ans=1;
 	while(y){

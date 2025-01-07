@@ -21,5 +21,5 @@ signed main(){
 		}
 	}
 	cout << ans << '\n';
-    cerr << (clock() - nw) / CLOCKS_PER_SEC << '\n';
+	cerr << (clock() - nw) / CLOCKS_PER_SEC << '\n';
 }

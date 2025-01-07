@@ -92,13 +92,13 @@ void solve2(){
 		int u=G[i];
 		if(i)ans[u]=max(ans[u],pre[0][i-1]+suf[1][i]),w[u]=max(w[u],max(pre[0][i-1]+i,pre[1][i-1]+siz-i));
 		if(i!=siz-1)ans[u]=max(ans[u],pre[0][i]+suf[1][i+1]),w[u]=max(w[u],max(suf[1][i+1]-i,suf[0][i+1]+siz+i));
-		ans[u]=max(ans[u],pre[2][i]+siz),ans[u]=max(ans[u],suf[2][i]+siz);    
+		ans[u]=max(ans[u],pre[2][i]+siz),ans[u]=max(ans[u],suf[2][i]+siz);	
 	}
 	for(int i=0;i<siz;i++){
 		int u=G[i];
 		if(i) ans[u]=max(ans[u],pre[0][i-1]+suf[1][i]),w[u]=max(w[u],max(i+pre[0][i-1],-i+pre[1][i-1]+siz));
 		if(i!=siz-1) ans[u]=max(ans[u],pre[0][i]+suf[1][i+1]),w[u]=max(w[u],max(-i+suf[1][i+1],i+suf[0][i+1]+siz));
-		ans[u]=max(ans[u],pre[2][i]+siz),ans[u]=max(ans[u],suf[2][i]+siz);    
+		ans[u]=max(ans[u],pre[2][i]+siz),ans[u]=max(ans[u],suf[2][i]+siz);	
 	}
 	for(int it:G)dfs2(it,0,w[it]);
 	for(int i=1;i<=n;i++)cout<<ans[i]<<" ";

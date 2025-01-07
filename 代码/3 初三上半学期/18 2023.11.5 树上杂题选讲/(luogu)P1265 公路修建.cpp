@@ -13,7 +13,7 @@ int main() {
 	dis[1]=0;
 	double ans=0;
 	for(int i=1; i<=n; i++) {
-        int now=0;
+		int now=0;
 		for(int j=1;j<=n;j++)if(dis[j]<dis[now]&&!vis[j])now=j;
 		ans+=dis[now],vis[now]=true;
 		for(int j=1;j<=n;j++)dis[j]=min(dis[j],f(now,j));

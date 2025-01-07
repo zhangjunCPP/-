@@ -10,14 +10,14 @@ signed main(){
 	int n;
 	cin>>n;
 	for(int i=1;i<=n;i++)cin>>s[i];
-    for(int i=1;i<=n;i++){
-        nex[i]=i;
-        int tmp=a[nex[i-1]][s[i]];
-        if(tmp)nex[i]=nex[tmp-1],dp[i]=dp[tmp-1]+1;
-        a[nex[i]][s[i]]=i;
-    }
-    long long ans=0;
-    for(int i=1;i<=n;i++) ans+=dp[i];
-    cout<<ans;
+	for(int i=1;i<=n;i++){
+		nex[i]=i;
+		int tmp=a[nex[i-1]][s[i]];
+		if(tmp)nex[i]=nex[tmp-1],dp[i]=dp[tmp-1]+1;
+		a[nex[i]][s[i]]=i;
+	}
+	long long ans=0;
+	for(int i=1;i<=n;i++) ans+=dp[i];
+	cout<<ans;
 	return 0;
 }

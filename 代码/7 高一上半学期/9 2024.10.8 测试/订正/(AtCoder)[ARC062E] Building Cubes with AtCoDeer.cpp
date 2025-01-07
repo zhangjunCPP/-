@@ -40,7 +40,7 @@ signed main(){
 					sum=sum*mp[tmp];
 					mp[tmp]--;
 					if(tmp.c[0]==tmp.c[2]&&tmp.c[1]==tmp.c[3])sum*=2;
-                    if(tmp.c[0]==tmp.c[1]&&tmp.c[1]==tmp.c[2]&&tmp.c[2]==tmp.c[3])sum*=2;
+					if(tmp.c[0]==tmp.c[1]&&tmp.c[1]==tmp.c[2]&&tmp.c[2]==tmp.c[3])sum*=2;
 				}
 				ans+=sum;
 				for(int l=0;l<4;l++){//枚举每一面

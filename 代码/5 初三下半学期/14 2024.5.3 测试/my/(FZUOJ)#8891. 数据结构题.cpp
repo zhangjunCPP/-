@@ -5,7 +5,7 @@ const int N=1e6+10,mod=998244353;
 int a[N];
 signed main(){
 	ios::sync_with_stdio(false);
-    cin.tie(nullptr),cout.tie(nullptr);
+	cin.tie(nullptr),cout.tie(nullptr);
 	int n,m;
 	cin>>n>>m;
 	for(int i=1;i<=n;i++)a[i]=1;

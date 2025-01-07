@@ -34,5 +34,5 @@ signed main(){
 		cin >> a >> b >> c;
 		cout << (sum[c][b]-sum[c][a-1]+P)%P << '\n';
 	}
-    cerr << (clock() - nw) / CLOCKS_PER_SEC << '\n';
+	cerr << (clock() - nw) / CLOCKS_PER_SEC << '\n';
 }

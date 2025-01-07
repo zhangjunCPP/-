@@ -13,7 +13,7 @@ struct node{
 }a[N];
 bool cmp(const node &x,const node &y){return x.d<y.d;}
 signed main(){
-    cin>>n>>k>>l;
+	cin>>n>>k>>l;
 	int last=0,sum=0;
 	for(int i=1;i<=n;i++) cin>>a[i].d>>a[i].col>>a[i].ch;
 	sort(a+1,a+n+1,cmp);
@@ -35,5 +35,5 @@ signed main(){
 	for(int i=0;i<k;i++) {
 		printf("%.1lf\n",ans[i]);
 	}
-    return 0;
+	return 0;
 }

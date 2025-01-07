@@ -75,7 +75,7 @@ void solve(int s,int t){
 	for(int i=1;i<=n;i++)if(pre[i]&&dis2[i]==Min) vec.push_back(i);
  	vector<int> ans;
 	while(true) {
-		pair<int,int> pii={INF,INF};  //ур╣╫обр╩╡Ц╣двНсе╫Б
+		pair<int,int> pii={INF,INF};  //О©╫р╣О©╫О©╫О©╫р╩О©╫О©╫О©╫О©╫О©╫О©╫е╫О©╫
 		for(int now:vec) {
 			for(int i=first[now];i;i=a[i].nex){
 				int v=a[i].v;
@@ -85,7 +85,7 @@ void solve(int s,int t){
 			}
 		}
 		ans.push_back(pii.second);
-		vector<int> nex_vec;    //обр╩╡Ц╣д╣Ц
+		vector<int> nex_vec;	//О©╫О©╫р╩О©╫О©╫д╣О©╫
 		for(int now:vec) {
 			for(int i=first[now];i;i=a[i].nex){
 				int v=a[i].v;

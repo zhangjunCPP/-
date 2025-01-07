@@ -93,7 +93,7 @@ int main() {
 				// if(city[i].opt)cout<<city[i].val<<" ";
 				// else cout<<max(city[i].val-(t-city[i].time)-dis(x,i),0)<<" ";
 			}
-			// cout<<"      ans=";
+			// cout<<"	  ans=";
 			cout<<ans<<"\n";
 		}
 	}

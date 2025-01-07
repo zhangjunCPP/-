@@ -52,7 +52,7 @@ struct Node {
 		}
 	}
 	// void print(){
-	//     debug(type,A,B,cntA,cntB,cntP,sum,lc-__pool,rc-__pool);
+	//	 debug(type,A,B,cntA,cntB,cntP,sum,lc-__pool,rc-__pool);
 	// }
 	static Node __pool[N*2];
 	static int __poolcnt;

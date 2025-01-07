@@ -8,21 +8,21 @@ int sum[N];
 int belong[N],l[N],r[N];
 int sta[M][M],top[M];
 double slope(int i,int j){
-    if(m[i]<=m[j])return INF;
-    return min(INF,1.0*(sum[j]-sum[i])/(m[j]-m[i]));
+	if(m[i]<=m[j])return INF;
+	return min(INF,1.0*(sum[j]-sum[i])/(m[j]-m[i]));
 }
 bool check(int x,int y,int i){
-    double k1=slope(x,y),k2=slope(y,i);
-    if(k2>=INF)return false;
-    return k1<=k2;
+	double k1=slope(x,y),k2=slope(y,i);
+	if(k2>=INF)return false;
+	return k1<=k2;
 }
 void build(int k){
-    top[k]=0;
-    for(int i=l[k];i<=r[k];i++){
-        while(top[k]>1&&check(sta[k][top[k]-1],sta[k][top[k]],i))top[k]--;
-        if(!top[k]||(top[k]&&slope(sta[k][top[k]],i)<INF))sta[k][++top[k]]=i;
-    }
-    sta[k][top[k]+1]=0;
+	top[k]=0;
+	for(int i=l[k];i<=r[k];i++){
+		while(top[k]>1&&check(sta[k][top[k]-1],sta[k][top[k]],i))top[k]--;
+		if(!top[k]||(top[k]&&slope(sta[k][top[k]],i)<INF))sta[k][++top[k]]=i;
+	}
+	sta[k][top[k]+1]=0;
 }
 int lazy[M];
 int ask(int k,int val){return sum[k]+lazy[belong[k]]+m[k]*val;}

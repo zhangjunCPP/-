@@ -3,7 +3,7 @@
 using namespace std;
 const int N=5e6+10;
 struct node{
-    int val,id;
+	int val,id;
 }a[N];
 bool cmp(const node&x,const node&y){return x.val<y.val;}
 int ch[N][2],tot=1;
@@ -62,8 +62,8 @@ signed main(){
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr),cout.tie(nullptr);
 	int n;
-    cin>>n;
-    for(int i=1;i<=n;i++)cin>>a[i].val,a[i].id=i;
+	cin>>n;
+	for(int i=1;i<=n;i++)cin>>a[i].val,a[i].id=i;
 	sort(a+1,a+n+1,cmp);
 	for(int i=1;i<=n;i++)insert(1,a[i].val,30,i);
 	solve(1,30);

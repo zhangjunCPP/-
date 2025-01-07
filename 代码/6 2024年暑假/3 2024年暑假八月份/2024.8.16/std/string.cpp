@@ -22,8 +22,8 @@ void solve() {
 }
 
 int main() {
-    freopen("string.in","r",stdin);
-    freopen("string.out","w",stdout);
+	freopen("string.in","r",stdin);
+	freopen("string.out","w",stdout);
 	ios::sync_with_stdio(false);
 	cin.tie(0), cout.tie(0);
 	ll t; cin>>t;

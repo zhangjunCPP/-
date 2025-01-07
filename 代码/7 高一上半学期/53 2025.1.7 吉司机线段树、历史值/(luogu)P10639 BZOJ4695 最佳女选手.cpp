@@ -15,21 +15,17 @@ void pushup(int k){
 	tree[k].sum=tree[ls].sum+tree[rs].sum;
 	
 	tree[k].max1=max(tree[ls].max1,tree[rs].max1);
-	tree[k].max2=-INF;
+	tree[k].max2=max(tree[ls].max2,tree[rs].max2);
 	if(tree[ls].max1<tree[k].max1)tree[k].max2=max(tree[k].max2,tree[ls].max1);
-	if(tree[ls].max2<tree[k].max1)tree[k].max2=max(tree[k].max2,tree[ls].max2);
 	if(tree[rs].max1<tree[k].max1)tree[k].max2=max(tree[k].max2,tree[rs].max1);
-	if(tree[rs].max2<tree[k].max1)tree[k].max2=max(tree[k].max2,tree[rs].max2);
 	tree[k].max_cnt=0;
 	if(tree[ls].max1==tree[k].max1)tree[k].max_cnt+=tree[ls].max_cnt;
 	if(tree[rs].max1==tree[k].max1)tree[k].max_cnt+=tree[rs].max_cnt;
 
 	tree[k].min1=min(tree[ls].min1,tree[rs].min1);
-	tree[k].min2=INF;
+	tree[k].min2=min(tree[ls].min2,tree[rs].min2);
 	if(tree[ls].min1>tree[k].min1)tree[k].min2=min(tree[k].min2,tree[ls].min1);
-	if(tree[ls].min2>tree[k].min1)tree[k].min2=min(tree[k].min2,tree[ls].min2);
 	if(tree[rs].min1>tree[k].min1)tree[k].min2=min(tree[k].min2,tree[rs].min1);
-	if(tree[rs].min2>tree[k].min1)tree[k].min2=min(tree[k].min2,tree[rs].min2);
 	tree[k].min_cnt=0;
 	if(tree[ls].min1==tree[k].min1)tree[k].min_cnt+=tree[ls].min_cnt;
 	if(tree[rs].min1==tree[k].min1)tree[k].min_cnt+=tree[rs].min_cnt;
